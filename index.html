@@ -477,6 +477,7 @@ footer {
     <span class="logo-ver">v1.0-alpha</span>
   </div>
   <div class="nav-links">
+    <a href="#platform">platform</a>
     <a href="#architecture">architecture</a>
     <a href="#database">database</a>
     <a href="#stack">stack</a>
@@ -540,6 +541,49 @@ footer {
           style="width:100%;max-width:520px;border-radius:16px;display:block;"
           loading="eager"
         />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════════════════════════════════
+     SECCIÓN PLATFORM — CUALQUIER MODELO DE NEGOCIO
+══════════════════════════════════════ -->
+<section id="platform">
+  <div class="container">
+    <div class="section-wrap">
+      <div class="section-label reveal">any business model</div>
+      <h2 class="section-title reveal">One platform.<br>Every vertical.</h2>
+      <p class="section-sub reveal" style="max-width:640px">OpenNxc is not tied to any industry. The same enterprise core powers ERP, Health, Fintech, Education, Logistics and more — each vertical adds only its own domain logic, nothing else.</p>
+
+      <div class="image-panel reveal" style="max-width:960px;margin:0 auto 48px;">
+        <img src="img/opennxc-en-Vertical.drawio.png"
+             alt="OpenNxc — integration with any business model"
+             class="zoomable-media" loading="lazy" />
+        <div class="image-caption">How any business domain plugs into OpenNxc — click to zoom</div>
+      </div>
+
+      <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="card card-blue reveal">
+          <div class="card-icon ci-blue">🏗️</div>
+          <h3>Stable core. Pluggable domain.</h3>
+          <p>Auth, multi-tenancy, RBAC, audit and notifications never change across verticals. Only the business modules differ — ERP, health records, loan origination, course catalog.</p>
+          <span class="card-tag ct-blue">bounded context</span>
+        </div>
+        <div class="card card-teal reveal">
+          <div class="card-icon ci-teal">⚡</div>
+          <h3>New vertical in 3–5 days.</h3>
+          <p>DDD bounded contexts + AI co-pilot = a production-ready business module in days. Separate schema, isolated data, fully integrated with the shared core.</p>
+          <span class="card-tag ct-teal">DDD + AI</span>
+        </div>
+        <div class="card card-purple reveal">
+          <div class="card-icon ci-purple">🔒</div>
+          <h3>Tenant isolation, always.</h3>
+          <p>Every vertical inherits PostgreSQL Row-Level Security, per-tenant roles, and per-tenant configuration — with zero extra setup per business domain.</p>
+          <span class="card-tag ct-purple">Row-Level Security</span>
+        </div>
       </div>
     </div>
   </div>
