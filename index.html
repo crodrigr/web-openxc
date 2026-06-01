@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpenNxc — Open Nexcore Platform</title>
+<title>OpenNxc — Enterprise SaaS Platform · Multi-tenant · DDD · AI</title>
+<meta name="description" content="OpenNxc is the open-source enterprise SaaS core: multi-tenant isolation, JWT 2FA auth, dynamic RBAC, real-time audit, and cloud DevOps — ship business logic from day one.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -122,7 +123,16 @@ section { position: relative; z-index: 1; }
 }
 .hero h1 .accent { color: var(--blue2); }
 .hero h1 .serif { font-family: var(--serif); font-style: italic; color: var(--text2); }
-.hero-desc { font-size: 16px; color: var(--text2); line-height: 1.75; margin: 0 auto 36px; max-width: 600px; }
+.hero-desc { font-size: 16px; color: var(--text2); line-height: 1.75; margin: 0 auto 24px; max-width: 620px; }
+.hero-includes {
+  display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  margin: 0 auto 32px; max-width: 680px;
+}
+.hero-includes span {
+  font-family: var(--mono); font-size: 11px; color: var(--text2);
+  display: flex; align-items: center; gap: 5px; letter-spacing: 0.2px;
+}
+.hi-check { color: var(--teal); font-size: 13px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 .btn-primary {
   background: var(--blue); color: #fff; border: none;
@@ -484,35 +494,42 @@ footer {
       <div class="hero-copy">
         <div class="hero-badge fade-up">
           <span class="hero-badge-dot"></span>
-          Open Source · Free Software
+          Enterprise SaaS Platform · Open Source
         </div>
         <h1 class="fade-up delay-1">
-          The Multi-Tenant Core Your<br>
-          Business Logic Deserves.
+          Launch enterprise SaaS.<br>
+          <span class="accent">Not its infrastructure.</span>
         </h1>
         <p class="hero-desc fade-up delay-2">
-          OpenNxc provides the entire infrastructure and core features for enterprise SaaS, so you can focus 100% on your product's unique value.
+          OpenNxc ships the complete enterprise core — JWT auth with 2FA, dynamic RBAC, multi-tenant isolation, real-time audit, WebSocket notifications, and cloud DevOps. Your team focuses on business logic from day one.
         </p>
+        <div class="hero-includes fade-up delay-2">
+          <span><b class="hi-check">✓</b> Multi-tenant isolation</span>
+          <span><b class="hi-check">✓</b> JWT RS256 + 2FA</span>
+          <span><b class="hi-check">✓</b> Dynamic RBAC</span>
+          <span><b class="hi-check">✓</b> Real-time audit</span>
+          <span><b class="hi-check">✓</b> Kubernetes-ready</span>
+        </div>
         <div class="hero-actions fade-up delay-3">
-          <a href="#architecture" class="btn-primary">Explore architecture</a>
+          <a href="#architecture" class="btn-primary">Explore the platform</a>
           <a href="https://github.com/opennxc" class="btn-ghost">github.com/opennxc</a>
         </div>
         <div class="hero-stats fade-up delay-4">
           <div>
             <div class="stat-val" style="color:var(--blue2)">5</div>
-            <div class="stat-lbl">PostgreSQL schemas</div>
+            <div class="stat-lbl">isolated DB schemas</div>
           </div>
           <div>
             <div class="stat-val" style="color:var(--teal)">10k+</div>
-            <div class="stat-lbl">concurrent req / VT</div>
+            <div class="stat-lbl">req/s · P99 ≤ 400ms</div>
           </div>
           <div>
             <div class="stat-val" style="color:var(--purple)">-40%</div>
-            <div class="stat-lbl">infra cost savings</div>
+            <div class="stat-lbl">lower infra cost</div>
           </div>
           <div>
             <div class="stat-val" style="color:var(--amber)">3-5 days</div>
-            <div class="stat-lbl">business module</div>
+            <div class="stat-lbl">per module · with AI</div>
           </div>
         </div>
       </div>
@@ -536,9 +553,9 @@ footer {
 <section id="architecture">
   <div class="container">
     <div class="section-wrap">
-      <div class="section-label reveal">architecture</div>
-      <h2 class="section-title reveal">DDD Modular Monolith<br>ready to migrate</h2>
-      <p class="section-sub reveal">A single JVM process with well-bounded internal modules. When the business demands it, each module is extracted as a microservice without touching the domain.</p>
+      <div class="section-label reveal">proven architecture</div>
+      <h2 class="section-title reveal">Clean DDD core.<br>Built to scale.</h2>
+      <p class="section-sub reveal">Domain entities are pure Java — no framework leakage, no coupling. A single JVM today; when business demands it, extract any module to a microservice without touching a single use case.</p>
 
       <div class="arch-layout">
         <div class="arch-visual reveal">
@@ -584,7 +601,7 @@ footer {
               <span class="arch-item-dot" style="background:var(--blue)"></span>
               Repository interfaces
             </div>
-            <p>Los use cases solo conocen la interfaz <code style="font-family:var(--mono);font-size:12px;color:var(--blue2)">UserRepository</code>. Today JPA implements it; tomorrow an HTTP client will. The use case never changes.</p>
+            <p>Use cases only know the <code style="font-family:var(--mono);font-size:12px;color:var(--blue2)">UserRepository</code> interface. Today JPA implements it; tomorrow an HTTP client will. The use case never changes.</p>
           </div>
           <div class="arch-item">
             <div class="arch-item-title">
@@ -598,7 +615,7 @@ footer {
               <span class="arch-item-dot" style="background:var(--amber)"></span>
               DDD + AI = 3-5 days per module
             </div>
-            <p>DDD gives structure to the context that AI needs to generate correct code. Without DDD, AI generates fast but coupled. With DDD it generates fast <em>y bien</em>.</p>
+            <p>DDD gives AI the structure it needs to generate correct code. Without DDD, AI generates fast but coupled. With DDD, it generates fast <em>and right</em>.</p>
           </div>
         </div>
       </div>
@@ -612,20 +629,20 @@ footer {
       <div class="cards-grid" style="margin-top:48px">
         <div class="card card-blue reveal">
           <div class="card-icon ci-blue">🔐</div>
-          <h3>2FA Authentication + JWT</h3>
-          <p>JWT RS256, TOTP/MFA, sessions with refresh token rotation, brute force protection, BCrypt passwords. No Spring Security — lighter, controllable custom interceptor.</p>
+          <h3>JWT RS256 + 2FA auth</h3>
+          <p>TOTP/MFA, refresh token rotation, brute-force protection, BCrypt passwords. A lightweight custom interceptor — no Spring Security overhead, full control.</p>
           <span class="card-tag ct-blue">auth-service</span>
         </div>
         <div class="card card-purple reveal">
           <div class="card-icon ci-purple">👥</div>
-          <h3>Users, roles and permissions</h3>
-          <p>Complete dynamic role system per tenant. Menu configured per role. HIDDEN / VIEW / EXECUTE permissions per UI component and per element (button, tab, field).</p>
+          <h3>Dynamic RBAC per tenant</h3>
+          <p>Complete role system per tenant, configured at runtime. HIDDEN / VIEW / EXECUTE permissions down to each UI component and element — button, tab, field.</p>
           <span class="card-tag ct-purple">module-tenant + module-menu</span>
         </div>
         <div class="card card-teal reveal">
           <div class="card-icon ci-teal">📋</div>
-          <h3>Audit module</h3>
-          <p>Full change log in MongoDB via Kafka. AuditIngestionService, QueryService, ExportService and tenant-configurable RetentionCleanup. Dead Letter Queue included.</p>
+          <h3>Complete audit trail</h3>
+          <p>Full change log in MongoDB via Kafka — ingestion, query, export, and tenant-configurable retention cleanup. Dead Letter Queue included for zero data loss.</p>
           <span class="card-tag ct-teal">audit-service</span>
         </div>
         <div class="card card-amber reveal">
@@ -642,8 +659,8 @@ footer {
         </div>
         <div class="card card-blue reveal">
           <div class="card-icon ci-blue">⚡</div>
-          <h3>Spring Boot 4 · Java 25 · VT</h3>
-          <p>Virtual Threads (Project Loom) enabled by default. 10,000+ concurrent requests at P99 latency of 360ms. 40% lower infrastructure cost vs traditional thread pool.</p>
+          <h3>10k+ req/s · Virtual Threads</h3>
+          <p>Java 25 with Project Loom Virtual Threads enabled by default. 10,000+ concurrent requests at P99 latency of 360ms — 40% lower infrastructure cost vs traditional thread pools.</p>
           <span class="card-tag ct-blue">Virtual Threads · Java 25</span>
         </div>
       </div>
@@ -659,9 +676,9 @@ footer {
 <section id="database">
   <div class="container">
     <div class="section-wrap">
-      <div class="section-label reveal">data and multi-tenancy</div>
-      <h2 class="section-title reveal">Separated schemas.<br>Complete isolation.</h2>
-      <p class="section-sub reveal">Each module owns its schema. No cross-schema JOINs. Every tenant isolated with Row-Level Security at the database level.</p>
+      <div class="section-label reveal">multi-tenant by design</div>
+      <h2 class="section-title reveal">Database-level isolation.<br>Every tenant. Always.</h2>
+      <p class="section-sub reveal">Five isolated PostgreSQL schemas with Row-Level Security enforced at the database — not in application code. One tenant can never access another's data, by design.</p>
 
       <div class="rule-box reveal">
         ⚠ Strict rule — no cross-schema JOINs · UUIDs as references only · no cross-schema FOREIGN KEYs → each module can have its own DB from day one
@@ -754,7 +771,7 @@ footer {
             <div class="mstep-inner">
               <div class="mstep-num">STEP 2</div>
               <div class="mstep-title">HTTP adapter</div>
-              <div class="mstep-desc">HttpUserRepositoryAdapter implements UserRepository. Dominio y use cases: sin tocar.</div>
+              <div class="mstep-desc">HttpUserRepositoryAdapter implements UserRepository. Domain and use cases: untouched.</div>
             </div>
           </div>
           <div class="mstep">
@@ -779,9 +796,9 @@ footer {
 <section id="stack">
   <div class="container">
     <div class="section-wrap">
-      <div class="section-label reveal">stack and growth</div>
-      <h2 class="section-title reveal">Modern technology.<br>Clear phases.</h2>
-      <p class="section-sub reveal">Production-proven stack without over-engineering. Four growth phases with real timelines — accelerated 4x with DDD + AI methodology.</p>
+      <div class="section-label reveal">modern stack · clear roadmap</div>
+      <h2 class="section-title reveal">Production-proven stack.<br>Four phases to full platform.</h2>
+      <p class="section-sub reveal">Spring Boot 4, Java 25 Virtual Threads, Angular 20, PostgreSQL, Kafka — no over-engineering. Each phase ships in weeks, not months, powered by DDD + AI.</p>
 
       <div class="stack-grid reveal">
         <div class="stack-cell">
@@ -888,12 +905,12 @@ footer {
   <div class="container">
     <div class="hero-badge" style="display:inline-flex;margin-bottom:20px">
       <span class="hero-badge-dot"></span>
-      Demo available · no commitment
+      45-min walkthrough · no commitment
     </div>
-    <h2>Your project. <span class="accent">One week.</span><br>Real results in production.</h2>
-    <p>If you have a SaaS project to kick off, I'll give you the platform.<br>Your team starts from business logic, not from JWT and Row-Level Security.</p>
+    <h2>Your product idea. <span class="accent">Our platform.</span><br>In production in weeks.</h2>
+    <p>Bring your business domain. OpenNxc provides auth, multi-tenancy, RBAC, audit, and cloud infrastructure.<br>Your team ships features — not boilerplate — from day one.</p>
     <div class="cta-actions">
-      <a href="mailto:demo@opennxc.io" class="btn-primary">Schedule demo — 45 min</a>
+      <a href="mailto:demo@opennxc.io" class="btn-primary">Book a 45-min demo</a>
       <a href="https://github.com/opennxc" class="btn-ghost">View on GitHub</a>
     </div>
   </div>
